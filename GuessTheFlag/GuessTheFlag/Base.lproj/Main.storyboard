@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KtI-Oa-bn4">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GuessTheFlag" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="haG-Zy-cVp">
+                                <rect key="frame" x="107" y="144" width="200" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="GtH-Xz-5UD"/>
+                                    <constraint firstAttribute="width" constant="200" id="XdE-vp-ut0"/>
+                                </constraints>
+                                <state key="normal" image="nigeria"/>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ToG-G9-hc4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="29j-GH-0vR">
+                                <rect key="frame" x="107" y="274" width="200" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="OSc-8G-CJV"/>
+                                    <constraint firstAttribute="height" constant="100" id="vdi-JF-KYC"/>
+                                </constraints>
+                                <state key="normal" image="nigeria"/>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J6j-9A-kar">
+                                <rect key="frame" x="107" y="404" width="200" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="NMO-r9-CVf"/>
+                                    <constraint firstAttribute="height" constant="100" id="mbC-ei-FD4"/>
+                                </constraints>
+                                <state key="normal" image="nigeria"/>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JIA-Ia-3gE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="J6j-9A-kar" firstAttribute="top" secondItem="29j-GH-0vR" secondAttribute="bottom" constant="30" id="2Id-iH-MTP"/>
+                            <constraint firstItem="29j-GH-0vR" firstAttribute="top" secondItem="haG-Zy-cVp" secondAttribute="bottom" constant="30" id="3VL-1H-vl2"/>
+                            <constraint firstItem="haG-Zy-cVp" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="5i0-uq-kGi"/>
+                            <constraint firstItem="29j-GH-0vR" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="WDY-nu-Ibb"/>
+                            <constraint firstItem="haG-Zy-cVp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="56" id="h2e-X0-9sd"/>
+                            <constraint firstItem="J6j-9A-kar" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="haO-Ab-7HX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="fJV-PQ-cx0"/>
+                    <connections>
+                        <outlet property="button1" destination="haG-Zy-cVp" id="LAb-yQ-Ddo"/>
+                        <outlet property="button2" destination="29j-GH-0vR" id="DXZ-oz-wgK"/>
+                        <outlet property="button3" destination="J6j-9A-kar" id="MIi-F4-mp6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="118.52678571428571"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="lHe-V1-nNB">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KtI-Oa-bn4" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Awb-VJ-PNb">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="HqN-9l-1Fc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e21-Aw-ELt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="118.52678571428571"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="nigeria" width="200" height="100"/>
+    </resources>
+</document>
